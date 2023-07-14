@@ -23,7 +23,8 @@ public class Application {
       return;
     }
 
-    String returnAccountNumber = accountNumberFormatter.formatAccountNumber(Integer.parseInt(accountNumber));
+    String returnAccountNumber = accountNumberFormatter.formatAccountNumber(
+        Integer.parseInt(accountNumber));
     System.out.println("Número da conta: " + returnAccountNumber);
   }
 

@@ -1,6 +1,5 @@
 package com.betrybe.bankaccount;
 
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -14,14 +13,14 @@ public class AccountNumberFormatter {
    * @param literalAccountNumber número da conta
    */
   public String formatAccountNumber(int literalAccountNumber) {
-    String StringAccountNumber = Integer.toString(literalAccountNumber);
-    if (StringAccountNumber.length() == 6){
-      return StringAccountNumber;
-    } else if (StringAccountNumber.length() < 6) {
-       StringAccountNumber=  StringUtils.leftPad(StringAccountNumber, 6, '0');
-    } else if (StringAccountNumber.length() > 6) {
-      StringAccountNumber=  StringUtils.right(StringAccountNumber, 6);
+    String stringAccountNumber = Integer.toString(literalAccountNumber);
+    if (stringAccountNumber.length() == 6) {
+      return stringAccountNumber;
+    } else if (stringAccountNumber.length() < 6) {
+      stringAccountNumber =  StringUtils.leftPad(stringAccountNumber, 6, '0');
+    } else if (stringAccountNumber.length() > 6) {
+      stringAccountNumber =  StringUtils.right(stringAccountNumber, 6);
     }
-    return StringAccountNumber;
+    return stringAccountNumber;
   }
 }
